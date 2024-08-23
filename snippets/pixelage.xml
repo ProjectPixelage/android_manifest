@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="pixelage"
+           fetch="https://github.com/ProjectPixelage"
+           revision="refs/heads/14" />
+
+  <remote  name="clarencelol-gitea"
+           fetch="https://gitea.com/clarencelol"
+           revision="refs/heads/lineage-21.0" />
+
+  <!-- pixelage additions -->
+  <project path="android" name="android_manifest" remote="pixelage" />
+
+  <!-- device -->
+  <project path="device/lineage/sepolicy" name="android_device_pixelage_sepolicy" remote="pixelage" />
+
+  <!-- hardware -->
+  <project path="hardware/qcom-caf/sm8150/audio" name="android_hardware_qcom_audio" groups="qcom,msmnile" remote="pixelage" revision="14-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/display" name="android_hardware_qcom_display" groups="qcom" remote="pixelage" revision="14-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/media" name="android_hardware_qcom_media" groups="qcom,msmnile" remote="pixelage" revision="14-caf-sm8150" />
+
+  <!-- packages -->
+  <project path="packages/apps/BtHelper" name="android_packages_apps_BtHelper" remote="pixelage" />
+  <project path="packages/apps/GameSpace" name="android_packages_apps_GameSpace" remote="pixelage" />
+  <project path="packages/apps/LineageParts" name="android_packages_apps_LineageParts" remote="pixelage" />
+  <project path="packages/apps/ParanoidSense" name="android_packages_apps_ParanoidSense" remote="pixelage" />
+  <project path="packages/apps/SystemUIFlagFlipper" name="android_packages_apps_SystemUIFlagFlipper" remote="pixelage" />
+  <project path="packages/apps/Updater" name="android_packages_apps_Updater" remote="pixelage" />
+
+  <!-- sdk -->
+  <project path="lineage-sdk" name="android_lineage-sdk" remote="pixelage" />
+
+  <!-- vendor -->
+  <project path="vendor/gms" name="android_vendor_gms" remote="clarencelol-gitea" clone-depth="1" />
+  <project path="vendor/lineage" name="android_vendor_pixelage" remote="pixelage" />
+
+</manifest>
