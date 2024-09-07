@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="pixelage"
+           fetch="https://github.com/ProjectPixelage"
+           revision="refs/heads/15" />
+
+  <remote  name="pixelage-gitea"
+           fetch="https://gitea.com/clarencelol"
+           revision="refs/heads/15" />
+
+  <!-- pixelage additions -->
+  <!-- manifest -->
+  <project path="manifest" name="android_manifest" remote="pixelage" />
+
+  <!-- bootable -->
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="pixelage" />
+  <project path="bootable/deprecated-ota" name="android_bootable_deprecated-ota" remote="pixelage" />
+
+  <!-- build -->
+  <project path="build/make" name="android_build" remote="pixelage" groups="pdk" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" remote="pixelage" groups="pdk,tradefed" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- device -->
+  <project path="device/lineage/sepolicy" name="android_device_pixelage_sepolicy" remote="pixelage" />
+
+  <!-- external -->
+  <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="pixelage" />
+  <project path="external/gptfdisk" name="android_external_gptfdisk" remote="pixelage" />
+  <project path="external/mksh" name="android_external_mksh" remote="pixelage" />
+  <project path="external/zstd" name="android_external_zstd" groups="pdk" remote="pixelage" />
+
+  <!-- frameworks -->
+  <project path="frameworks/av" name="android_frameworks_av" remote="pixelage" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="pixelage" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="pixelage" />
+
+  <!-- hardware -->
+  <project path="hardware/google/pixel" name="android_hardware_google_pixel" remote="pixelage" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="pixelage" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="pixelage" />
+  <project path="hardware/lineage/interfaces" name="android_hardware_lineage_interfaces" remote="pixelage" />
+
+  <!-- packages -->
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="pixelage" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="pixelage" />
+
+  <!-- system -->
+  <project path="system/bpf" name="android_system_bpf" remote="pixelage" />
+  <project path="system/core" name="android_system_core" remote="pixelage" />
+  <project path="system/security" name="android_system_security" remote="pixelage" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="pixelage" />
+  <project path="system/update_engine" name="android_system_update_engine" remote="pixelage" />
+  <project path="system/vold" name="android_system_vold" remote="pixelage" />
+
+  <!-- vendor -->
+  <project path="vendor/gms" name="android_vendor_gms" remote="pixelage-gitea" clone-depth="1" />
+  <project path="vendor/pixelage" name="android_vendor_pixelage" remote="pixelage" />
+
+  <!-- CodeLinaro additions -->
+  <!-- hardware -->
+  <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" groups="qcom" remote="pixelage" >
+    <!-- add guard for AOSP hardware/qcom dir -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8953/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm660/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8350/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8450/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8450/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8450/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8550/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8550/Android.mk" />
+  </project>
+  <project path="hardware/qcom-caf/sm8150/audio" name="android_hardware_qcom_audio" groups="qcom,msmnile" remote="pixelage" revision="15-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/display" name="android_hardware_qcom_display" groups="qcom" remote="pixelage" revision="15-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/media" name="android_hardware_qcom_media" groups="qcom,msmnile" remote="pixelage" revision="15-caf-sm8150" />
+  <project path="hardware/qcom-caf/wlan" name="android_hardware_qcom_wlan" groups="qcom,kailua-vendor" remote="pixelage" />
+
+  <!-- vendor -->
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,lahaina" remote="pixelage" revision="15-caf-legacy-um" />
+
+</manifest>
