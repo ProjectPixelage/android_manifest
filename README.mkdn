@@ -14,3 +14,29 @@ Then to sync up:
 ```
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune
 ```
+
+Building Pixelage
+-------------------
+Export your device codename with PIXELAGE_BUILD
+
+```export
+export PIXELAGE_BUILD="codename"
+```
+
+Initialize the ROM environment with the envsetup.sh script.
+
+```bash
+. build/envsetup.sh
+```
+
+Lunch your device after cloning all device sources if needed.
+
+```bash
+lunch pixelage_codename-ap3a-buildtype
+```
+
+Start compilation
+
+```bash
+mka bacon
+```
