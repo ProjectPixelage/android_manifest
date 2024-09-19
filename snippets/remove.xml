@@ -4,9 +4,11 @@
   <!-- general -->
   <remove-project name="platform/art" />
   <remove-project name="platform/bionic" />
+  <remove-project name="platform/development" />
 
   <!-- build -->
   <remove-project name="platform/build" />
+  <remove-project name="platform/build/blueprint" />
   <remove-project name="platform/build/soong" />
 
   <!-- bootable -->
@@ -107,6 +109,7 @@
   <remove-project name="platform/frameworks/av" />
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/frameworks/native" />
+  <remove-project name="platform/frameworks/opt/telephony" />
 
   <!-- hardware -->
   <remove-project name="platform/hardware/google/pixel" />
@@ -121,6 +124,7 @@
   <remove-project name="platform/packages/apps/Settings" />
   <remove-project name="platform/packages/modules/Bluetooth" />
   <remove-project name="platform/packages/modules/Connectivity" />
+  <remove-project name="platform/packages/modules/Virtualization" />
   <remove-project name="platform/packages/services/Telecomm" />
 
   <!-- system -->
