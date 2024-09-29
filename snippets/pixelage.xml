@@ -69,6 +69,7 @@
   <project path="kernel/configs" name="android_kernel_configs" groups="vts,pdk" remote="pixelage" />
 
   <!-- packages -->
+  <project path="packages/apps/BtHelper" name="android_packages_apps_BtHelper" remote="pixelage" />
   <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="pixelage" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="pixelage" />
   <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" groups="pdk" remote="pixelage" />
