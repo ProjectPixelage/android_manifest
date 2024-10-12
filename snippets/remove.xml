@@ -102,7 +102,6 @@
   <remove-project name="platform/external/mksh" />
   <remove-project name="platform/external/skia" />
   <remove-project name="platform/external/tinycompress" />
-  <remove-project name="platform/external/webp" />
   <remove-project name="platform/external/zstd" />
 
   <!-- frameworks -->

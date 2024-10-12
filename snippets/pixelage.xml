@@ -103,6 +103,7 @@
   <project path="hardware/qcom-caf/wlan" name="android_hardware_qcom_wlan" groups="qcom,kailua-vendor" remote="pixelage" revision="15-caf" />
 
   <!-- vendor -->
+  <project path="vendor/qcom/opensource/commonsys/fm" name="android_vendor_qcom_opensource_fm-commonsys" groups="qcom,qssi" remote="pixelage" />
   <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,lahaina" remote="pixelage" revision="15-caf-legacy-um" />
 
 </manifest>
