@@ -23,9 +23,6 @@
   <project path="external/unrar" name="android_external_unrar" remote="lineage" />
   <project path="external/vim" name="android_external_vim" remote="lineage" />
 
-  <!-- hardware -->
-  <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="lineage" />
-
   <!-- packages -->
   <project path="packages/apps/Aperture" name="android_packages_apps_Aperture" remote="lineage" />
   <project path="packages/apps/AudioFX" name="android_packages_apps_AudioFX" remote="lineage" />
