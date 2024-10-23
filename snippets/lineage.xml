@@ -7,14 +7,26 @@
            revision="refs/heads/lineage-22.0" />
 
   <!-- LineageOS additions -->
+  <project path="development" name="android_development" groups="developers,pdk-cw-fs,pdk-fs" remote="lineage" />
   <project path="prebuilts/extract-tools" name="android_prebuilts_extract-tools" clone-depth="1" remote="lineage" />
   <project path="tools/extract-utils" name="android_tools_extract-utils" remote="lineage" />
 
+  <!-- bootable -->
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="lineage" />
+  <project path="bootable/deprecated-ota" name="android_bootable_deprecated-ota" remote="lineage" />
+
+  <!-- build -->
+  <project path="build/blueprint" name="android_build_blueprint" groups="pdk,tradefed" remote="lineage" />
+
   <!-- external -->
   <project path="external/bash" name="android_external_bash" remote="lineage" />
+  <project path="external/dtc" name="android_external_dtc" remote="lineage" />
+  <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="lineage" />
+  <project path="external/gptfdisk" name="android_external_gptfdisk" remote="lineage" />
   <project path="external/htop" name="android_external_htop" remote="lineage" />
   <project path="external/json-c" name="android_external_json-c" groups="qcom,qssi" remote="lineage" />
   <project path="external/libncurses" name="android_external_libncurses" remote="lineage" />
+  <project path="external/mksh" name="android_external_mksh" remote="lineage" />
   <project path="external/nano" name="android_external_nano" remote="lineage" />
   <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="lineage" />
   <project path="external/openssh" name="android_external_openssh" remote="lineage" />
@@ -22,12 +34,28 @@
   <project path="external/tinycompress" name="android_external_tinycompress" remote="lineage" />
   <project path="external/unrar" name="android_external_unrar" remote="lineage" />
   <project path="external/vim" name="android_external_vim" remote="lineage" />
+  <project path="external/zstd" name="android_external_zstd" groups="pdk" remote="lineage" />
+
+  <!-- hardware -->
+  <project path="hardware/google/pixel" name="android_hardware_google_pixel" remote="lineage" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="lineage" />
+  <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="lineage" />
+
+  <!-- kernel -->
+  <project path="kernel/configs" name="android_kernel_configs" groups="vts,pdk" remote="lineage" />
 
   <!-- packages -->
   <project path="packages/apps/Aperture" name="android_packages_apps_Aperture" remote="lineage" />
   <project path="packages/apps/AudioFX" name="android_packages_apps_AudioFX" remote="lineage" />
   <project path="packages/apps/SimpleSettingsConfig" name="android_packages_apps_SimpleSettingsConfig" remote="lineage" />
+  <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" groups="pdk" remote="lineage" />
+  <project path="packages/modules/Virtualization" name="android_packages_modules_Virtualization" groups="pdk" remote="lineage" />
   <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="lineage" />
+
+  <!-- system -->
+  <project path="system/bpf" name="android_system_bpf" remote="lineage" />
+  <project path="system/security" name="android_system_security" remote="lineage" />
+  <project path="system/vold" name="android_system_vold" remote="lineage" />
 
   <!-- Inline kernel build -->
   <project path="prebuilts/clang/kernel/linux-x86/clang-r416183b" name="android_prebuilts_clang_kernel_linux-x86_clang-r416183b" clone-depth="1" remote="lineage" revision="lineage-20.0" />
@@ -126,6 +154,7 @@
   <project path="vendor/qcom/opensource/core-utils-sys" name="android_vendor_qcom_opensource_core-utils-sys" groups="qcom,qssi" remote="lineage" />
   <project path="vendor/qcom/opensource/core-utils-vendor" name="android_vendor_qcom_opensource_core-utils-vendor" groups="qcom,kailua-vendor" remote="lineage" />
   <project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" groups="qcom,kailua-vendor" remote="lineage" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,lahaina" remote="lineage" revision="lineage-22.0-legacy-um" />
   <project path="vendor/qcom/opensource/display" name="android_vendor_qcom_opensource_display" groups="qcom" remote="lineage" />
   <project path="vendor/qcom/opensource/healthd-ext" name="android_vendor_qcom_opensource_healthd-ext" groups="qcom,kailua-vendor" remote="lineage" />
   <project path="vendor/qcom/opensource/interfaces" name="android_vendor_qcom_opensource_interfaces" groups="qcom,qssi" remote="lineage" />
