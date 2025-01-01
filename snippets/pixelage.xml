@@ -94,6 +94,7 @@
   <project path="vendor/custom-preference" name="android_vendor_custom-preference" remote="pixelage" />
   <project path="vendor/gms" name="android_vendor_gms" remote="pixelage-gitea" clone-depth="1" />
   <project path="vendor/pixelage" name="android_vendor_pixelage" remote="pixelage" />
+  <project path="vendor/pixelage-pif" name="android_vendor_pixelage-pif" remote="pixelage" />
 
   <!-- CodeLinaro additions -->
   <!-- hardware -->
