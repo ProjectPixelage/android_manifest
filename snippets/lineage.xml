@@ -35,7 +35,6 @@
 
   <!-- packages -->
   <project path="packages/apps/Aperture" name="android_packages_apps_Aperture" remote="lineage" />
-  <project path="packages/apps/AudioFX" name="android_packages_apps_AudioFX" remote="lineage" />
   <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="lineage" />
   <project path="packages/apps/SimpleSettingsConfig" name="android_packages_apps_SimpleSettingsConfig" remote="lineage" />
   <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="lineage" />
