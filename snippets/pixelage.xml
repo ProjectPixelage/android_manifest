@@ -80,9 +80,6 @@
   <project path="packages/services/DeviceAsWebcam" name="android_packages_services_DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs" remote="pixelage" />
   <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="pixelage" />
 
-  <!-- prebuilts -->
-  <project path="prebuilts/clang/host/linux-x86/clang-r487747c" name="clang-r487747c" remote="pixelage-gitea" clone-depth="1" />
-
   <!-- system -->
   <project path="system/bpf" name="android_system_bpf" remote="pixelage" />
   <project path="system/core" name="android_system_core" remote="pixelage" />
