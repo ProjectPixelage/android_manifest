@@ -106,7 +106,6 @@
   <project path="hardware/qcom-caf/sm8150/display" name="android_hardware_qcom_display" groups="qcom" remote="pixelage" revision="15-caf-sm8150" />
   <project path="hardware/qcom-caf/sm8150/media" name="android_hardware_qcom_media" groups="qcom,msmnile" remote="pixelage" revision="15-caf-sm8150" />
   -->
-  <project path="hardware/qcom-caf/sm8450/media" name="android_hardware_qcom_media" groups="qcom,waipio-vendor" remote="pixelage" revision="15-caf-sm8450" />
   <project path="hardware/qcom-caf/sm8650/audio/agm" name="android_vendor_qcom_opensource_agm-sm8650" groups="qcom,lanai-audio" remote="pixelage" />
   <project path="hardware/qcom-caf/sm8650/audio/pal" name="android_vendor_qcom_opensource_arpal-lx-sm8650" groups="qcom,lanai-audio" remote="pixelage" />
   <project path="hardware/qcom-caf/sm8650/audio/primary-hal" name="android_hardware_qcom_audio-ar-sm8650" groups="qcom,lanai-audio" remote="pixelage" />
