@@ -43,6 +43,7 @@
 
   <!-- external -->
   <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="pixelage" />
+  <project path="external/jemalloc_new" name="android_external_jemalloc_new" groups="pdk" remote="pixelage" />
   <project path="external/skia" name="android_external_skia" groups="pdk,qcom_msm8x26" remote="pixelage" />
   <project path="external/tinyalsa" name="android_external_tinyalsa" groups="pdk" remote="pixelage" />
   <project path="external/zstd" name="android_external_zstd" groups="pdk" remote="pixelage" />
