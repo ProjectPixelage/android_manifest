@@ -32,7 +32,7 @@ Initialize the ROM environment with the envsetup.sh script.
 Lunch your device after cloning all device sources if needed.
 
 ```bash
-lunch pixelage_codename-ap4a-buildtype
+lunch pixelage_codename-bp1a-buildtype
 ```
 
 Start compilation
