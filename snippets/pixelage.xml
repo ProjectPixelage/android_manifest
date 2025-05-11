@@ -5,9 +5,8 @@
            fetch="https://github.com/ProjectPixelage"
            revision="refs/heads/15" />
 
-  <remote  name="pixelage-gitea"
-           fetch="https://gitea.com/clarencelol"
-           revision="refs/heads/15" />
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/" />
 
   <!-- pixelage additions -->
   <!-- manifest -->
@@ -94,7 +93,7 @@
   <!-- vendor -->
   <project path="vendor/certification" name="android_vendor_certification" remote="pixelage" />
   <project path="vendor/custom-preference" name="android_vendor_custom-preference" remote="pixelage" />
-  <project path="vendor/gms" name="android_vendor_gms" remote="pixelage-gitea" clone-depth="1" />
+  <project path="vendor/gms" name="projectpixelage/android_vendor_gms" remote="gitlab" revision="15" clone-depth="1" />
   <project path="vendor/pixelage" name="android_vendor_pixelage" remote="pixelage" />
 
   <!-- CodeLinaro additions -->
